@@ -1,0 +1,10 @@
+^D:\CPS\DRS\BUILD\WINDOWS\X64\CMAKEFILES\3870502B35B3F2A76709D503C8674EB1\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

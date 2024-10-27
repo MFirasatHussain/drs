@@ -1,0 +1,10 @@
+^D:\CPS\DRS\BUILD\WINDOWS\X64\CMAKEFILES\3870502B35B3F2A76709D503C8674EB1\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CPS/drs/windows -BD:/CPS/drs/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/CPS/drs/build/windows/x64/drs.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
